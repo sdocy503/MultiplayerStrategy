@@ -18,5 +18,13 @@ MonoBehaviour:
     m_StripUIComponents: 1
     m_StripAudioComponents: 1
     m_CustomComponentsList:
-      m_Keys: []
-      m_Values: 
+      m_Keys:
+      - m_TypeName: MovementManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+      - m_TypeName: NetworkConnectClient, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+      - m_TypeName: NetworkConnectServer, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+      - m_TypeName: ServerData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+      m_Values: 02000000010000000200000002000000

@@ -4,16 +4,16 @@ using Unity.Netcode;
 public class Star : MonoBehaviour
 {
     private NetworkManager NetworkManager;
-    private PlayerNetwork CurrentPlayer;
+    private FleetNetwork CurrentPlayer;
 
     void OnMouseDown()
     {
         if(NetworkManager == null)
         {
             NetworkManager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
-            CurrentPlayer = NetworkManager.LocalClient.PlayerObject.GetComponent<PlayerNetwork>();
+            CurrentPlayer = NetworkManager.LocalClient.PlayerObject.GetComponent<FleetNetwork>();
         }
 
-        CurrentPlayer.MovePlayerRpc(transform.position);
+        CurrentPlayer.SetDestinationRpc(gameObject.name);
     }
 }
