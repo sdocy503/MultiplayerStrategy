@@ -13,6 +13,7 @@ public class ClientManager : MonoBehaviour
 
     void OnClientConnected(NetworkManager manager, ConnectionEventData cData)
     {
+        // When a client connects add the client's fleet to the fleet list
         data.AddFleet(NetworkManager.Singleton.ConnectedClients[cData.ClientId].PlayerObject.gameObject);
     }
 }
