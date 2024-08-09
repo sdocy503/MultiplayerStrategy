@@ -1,10 +1,24 @@
 using UnityEngine;
 using Unity.Netcode;
+using TMPro;
 
 public class Star : MonoBehaviour
 {
     private NetworkManager NetworkManager;
     private FleetNetwork CurrentPlayer;
+
+    private void Start()
+    {
+        // Get the label for the location
+        TMP_Text text = GetComponentInChildren<TMP_Text>();
+
+        // If the label is valid, this is not valid on the server as UI is stripped
+        if (text)
+        {
+            // Set the label to the name of the game object
+            text.text = gameObject.name;
+        }
+    }
 
     void OnMouseDown()
     {
